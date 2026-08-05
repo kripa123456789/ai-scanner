@@ -114,13 +114,13 @@ For full privacy disclosures, review our official [Privacy Policy](https://kripa
 
 ## 🖼 Product Preview
 
-| Scanner Interface | OCR Text Extraction |
-| :---: | :---: |
-| ![Scanner Interface](./assets/images/screenshots/scanner.jpg) | ![OCR Text Extraction](./assets/images/screenshots/ocr.jpg) |
+| Scanner Interface | OCR Text Extraction | AI Document Summary |
+| :---: | :---: | :---: |
+| ![Scanner Interface](./assets/images/screenshots/scanner.jpg) | ![OCR Text Extraction](./assets/images/screenshots/ocr.jpg) | ![AI Document Summary](./assets/images/screenshots/ai-summary.jpg) |
 
-| AI Document Summary | Searchable PDF & Marketing Banner |
-| :---: | :---: |
-| ![AI Document Summary](./assets/images/screenshots/ai-summary.jpg) | ![AI Scanner Marketing Banner](./assets/images/marketing/banner.jpg) |
+| Searchable PDF & Marketing Banner |
+| :---: |
+| ![AI Scanner Marketing Banner](./assets/images/marketing/banner.jpg) |
 
 ---
 
