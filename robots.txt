@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kripa123456789.github.io/ai-scanner/sitemap.xml

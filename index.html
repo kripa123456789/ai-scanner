@@ -3,50 +3,831 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
     <meta
       name="description"
-      content="AI Scanner is a private, fast, local-first Android application designed for simple and secure scanning workflows."
+      content="Scan documents, extract text with on-device OCR, create searchable PDFs, organize documents and generate optional AI-powered summaries with AI Scanner for Android."
     />
-    <title>AI Scanner</title>
+    <title>AI Scanner – PDF Scanner, OCR &amp; AI Document Intelligence</title>
+    <link rel="canonical" href="https://kripa123456789.github.io/ai-scanner/" />
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="AI Scanner – PDF Scanner, OCR &amp; AI Document Intelligence" />
+    <meta property="og:description" content="Scan documents, extract text with on-device OCR, create searchable PDFs, organize documents and generate optional AI-powered summaries with AI Scanner for Android." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kripa123456789.github.io/ai-scanner/" />
+    <meta property="og:image" content="https://kripa123456789.github.io/ai-scanner/assets/images/marketing/banner.jpg" />
+    <meta property="og:image:alt" content="AI Scanner document scanning, OCR and AI document intelligence features" />
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI Scanner – PDF Scanner, OCR &amp; AI Document Intelligence" />
+    <meta name="twitter:description" content="Scan documents, extract text with on-device OCR, create searchable PDFs, organize documents and generate optional AI-powered summaries with AI Scanner for Android." />
+    <meta name="twitter:image" content="https://kripa123456789.github.io/ai-scanner/assets/images/marketing/banner.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/images/app-icon/app-icon.png" />
     <link rel="stylesheet" href="./style.css" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AI Scanner",
+      "operatingSystem": "Android",
+      "applicationCategory": "ProductivityApplication",
+      "description": "Fast, local-first Android app for document scanning, optical character recognition (OCR), searchable PDF creation, and Gemini-powered document intelligence.",
+      "url": "https://kripa123456789.github.io/ai-scanner/"
+    }
+    </script>
   </head>
   <body>
-    <header class="site-header">
+    <header class="site-header" id="site-header">
       <nav class="nav container" aria-label="Main navigation">
-        <a class="brand" href="./index.html">AI Scanner</a>
-        <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+        <a class="brand" href="./index.html" aria-label="AI Scanner Home">
+          <div class="brand-icon-wrapper">
+            <img 
+              src="./assets/images/app-icon/app-icon.png" 
+              alt="" 
+              class="app-icon-img" 
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" 
+            />
+            <div class="app-icon-fallback" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+                <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+                <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+                <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+                <line x1="7" y1="12" x2="17" y2="12"></line>
+                <line x1="12" y1="7" x2="12" y2="17"></line>
+              </svg>
+            </div>
+          </div>
+          <span class="brand-text">AI Scanner</span>
+        </a>
+
+        <button 
+          class="menu-toggle" 
+          aria-label="Toggle navigation menu" 
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
         </button>
-        <div class="nav-links">
-          <a href="./privacy.html">Privacy Policy</a>
-          <a href="./terms.html">Terms of Service</a>
+
+        <div class="nav-menu" id="primary-navigation">
+          <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#ai-technology">AI Technology</a></li>
+            <li><a href="#screenshots">Screenshots</a></li>
+          </ul>
+          <div class="nav-cta-wrapper">
+            <a href="#download" class="btn btn-nav">Get the App</a>
+          </div>
         </div>
       </nav>
     </header>
 
-    <main>
-      <section class="hero-section">
-        <div class="container hero-content">
-          <div class="hero-text">
-            <p class="eyebrow">Android App</p>
-            <h1>AI Scanner – PDF & OCR</h1>
-            <p class="hero-subtitle">Private. Fast. Local-first.</p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="./privacy.html">Privacy Policy</a>
-              <a class="btn btn-secondary" href="./terms.html">Terms of Service</a>
+    <main id="main-content">
+      <section class="hero-section" id="hero">
+        <div class="container hero-container">
+          <!-- LEFT COLUMN: Product Positioning & Action -->
+          <div class="hero-text-col">
+            <div class="eyebrow-badge">
+              <svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.523 15.3414C17.0526 15.3414 16.671 15.723 16.671 16.1934C16.671 16.6638 17.0526 17.0454 17.523 17.0454C17.9934 17.0454 18.375 16.6638 18.375 16.1934C18.375 15.723 17.9934 15.3414 17.523 15.3414ZM6.477 15.3414C6.0066 15.3414 5.625 15.723 5.625 16.1934C5.625 16.6638 6.0066 17.0454 6.477 17.0454C6.9474 17.0454 7.329 16.6638 7.329 16.1934C7.329 15.723 6.9474 15.3414 6.477 15.3414ZM17.962 10.457L19.467 7.8504C19.6104 7.602 19.5252 7.2846 19.2768 7.1412C19.0284 6.9978 18.711 7.083 18.5676 7.3314L17.0274 9.999C15.5262 9.3138 13.824 8.925 12 8.925C10.176 8.925 8.4738 9.3138 6.9726 9.999L5.4324 7.3314C5.289 7.083 4.9716 6.9978 4.7232 7.1412C4.4748 7.2846 4.3896 7.602 4.533 7.8504L6.038 10.457C2.656 12.302 0.354 15.655 0 19.688H24C23.646 15.655 21.344 12.302 17.962 10.457Z"/>
+              </svg>
+              <span>Android App</span>
+            </div>
+            
+            <h1 class="hero-headline">Turn Any Document Into Intelligent Information.</h1>
+            
+            <p class="hero-subtitle">
+              Scan documents, extract text with OCR, create searchable PDFs and understand documents instantly with AI.
+            </p>
+            
+            <div class="hero-actions" id="get-app">
+              <a class="btn btn-primary" href="#download">
+                <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3.609 1.814L13.792 12 3.61 22.186a1.99 1.99 0 0 1-.61-.958L3 2.772c0-.368.106-.72.303-.958zM15.206 13.414l2.584 2.584-12.753 7.362 10.169-9.946zm2.584-5.412L15.206 10.586 5.037.64l12.753 7.362zM16.621 12l2.97-2.97a1.99 1.99 0 0 1 0 3.94L16.62 12z"/>
+                </svg>
+                <span>Coming Soon on Google Play</span>
+              </a>
+              <a class="btn btn-secondary" href="#features">Explore Features</a>
+            </div>
+
+            <div class="capability-row" aria-label="Key Capabilities">
+              <span class="capability-item">Document Scanner</span>
+              <span class="capability-dot" aria-hidden="true">•</span>
+              <span class="capability-item">OCR</span>
+              <span class="capability-dot" aria-hidden="true">•</span>
+              <span class="capability-item">AI Summaries</span>
+              <span class="capability-dot" aria-hidden="true">•</span>
+              <span class="capability-item">PDF Tools</span>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Product Visual Composition -->
+          <div class="hero-visual-col">
+            <div class="visual-composition">
+              <div class="ambient-glow" aria-hidden="true"></div>
+              
+              <div class="hero-graphic-card">
+                <img 
+                  src="./assets/images/screenshots/home.jpg" 
+                  alt="AI Scanner Android Application Interface" 
+                  class="hero-graphic-img"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <!-- Clean fallback if home.jpg is pending -->
+                <div class="graphic-fallback-box" aria-hidden="true">
+                  <div class="fallback-badge">AI SCANNER HOME</div>
+                  <span class="fallback-desc">Product graphic unavailable</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- CORE FEATURES SECTION -->
+      <section class="features-section" id="features">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow-badge">CORE CAPABILITIES</span>
+            <h2 class="section-title">Everything You Need to Work Smarter With Documents</h2>
+            <p class="section-subtitle">
+              From scanning a page to understanding its contents, AI Scanner brings the complete document workflow into one streamlined Android app.
+            </p>
+          </div>
+
+          <div class="features-grid">
+            <!-- Card 1: Smart Scan -->
+            <div class="feature-card">
+              <div class="card-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+                  <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+                  <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+                  <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+                  <rect x="7" y="7" width="10" height="10" rx="1.5"></rect>
+                </svg>
+              </div>
+              <h3 class="card-title">Smart Document Scanning</h3>
+              <p class="card-desc">
+                Capture documents with automatic detection, cropping and image enhancement for clean, readable scans.
+              </p>
+              <span class="card-tag">Auto-Detect &amp; Crop</span>
+            </div>
+
+            <!-- Card 2: OCR -->
+            <div class="feature-card">
+              <div class="card-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 7 4 4 20 4 20 7"></polyline>
+                  <line x1="9" y1="20" x2="15" y2="20"></line>
+                  <line x1="12" y1="4" x2="12" y2="20"></line>
+                  <path d="M17 12h3M4 12h3"></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Extract Text with OCR</h3>
+              <p class="card-desc">
+                Turn scanned pages and images into selectable, searchable text in seconds.
+              </p>
+              <span class="card-tag">On-Device OCR Engine</span>
+            </div>
+
+            <!-- Card 3: AI Document Intelligence (Subtle Emphasis) -->
+            <div class="feature-card feature-card-featured">
+              <div class="card-header-badge">
+                <span class="ai-badge">Gemini AI</span>
+              </div>
+              <div class="card-icon-box card-icon-ai">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </div>
+              <h3 class="card-title">AI Document Intelligence</h3>
+              <p class="card-desc">
+                Transform lengthy documents into clear, useful summaries powered by AI.
+              </p>
+              <span class="card-tag card-tag-ai">Instant Insights</span>
+            </div>
+
+            <!-- Card 4: Powerful PDF Tools -->
+            <div class="feature-card">
+              <div class="card-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="9" y1="13" x2="15" y2="13"></line>
+                  <line x1="9" y1="17" x2="15" y2="17"></line>
+                </svg>
+              </div>
+              <h3 class="card-title">Powerful PDF Tools</h3>
+              <p class="card-desc">
+                Create, merge, organize, search and export PDFs from one streamlined workspace.
+              </p>
+              <span class="card-tag">Merge &amp; Organize</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS SECTION -->
+      <section class="how-it-works-section" id="how-it-works">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow-badge">HOW IT WORKS</span>
+            <h2 class="section-title">From Paper to Intelligence in Seconds</h2>
+            <p class="section-subtitle">
+              Capture a document, enhance it automatically, extract searchable text and turn the result into useful information with AI.
+            </p>
+          </div>
+
+          <div class="workflow-grid">
+            <!-- Step 1: Scan or Import -->
+            <div class="workflow-card">
+              <div class="workflow-header">
+                <span class="step-badge">01</span>
+                <div class="workflow-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                    <circle cx="12" cy="13" r="4"></circle>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="workflow-title">Scan or Import</h3>
+              <p class="workflow-desc">
+                Capture a document with the camera or securely import an image from your device.
+              </p>
+            </div>
+
+            <!-- Step 2: Detect & Enhance -->
+            <div class="workflow-card">
+              <div class="workflow-header">
+                <span class="step-badge">02</span>
+                <div class="workflow-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2v14a2 2 0 0 0 2 2h14"></path>
+                    <path d="M18 22V8a2 2 0 0 0-2-2H2"></path>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="workflow-title">Detect &amp; Enhance</h3>
+              <p class="workflow-desc">
+                Automatically detect document boundaries, crop the page and improve image clarity.
+              </p>
+            </div>
+
+            <!-- Step 3: Extract with OCR -->
+            <div class="workflow-card">
+              <div class="workflow-header">
+                <span class="step-badge">03</span>
+                <div class="workflow-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="workflow-title">Extract with OCR</h3>
+              <p class="workflow-desc">
+                Convert scanned pages into selectable, searchable text using on-device OCR.
+              </p>
+            </div>
+
+            <!-- Step 4: Understand with AI -->
+            <div class="workflow-card workflow-card-ai">
+              <div class="workflow-header">
+                <span class="step-badge step-badge-ai">04</span>
+                <div class="workflow-icon-box workflow-icon-ai">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="workflow-title">Understand with AI</h3>
+              <p class="workflow-desc">
+                Use Gemini-powered document intelligence to generate concise summaries and useful insights.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI TECHNOLOGY / DOCUMENT INTELLIGENCE PIPELINE SECTION -->
+      <section class="ai-tech-section" id="ai-technology">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow-badge">AI TECHNOLOGY</span>
+            <h2 class="section-title">From Scan to Structured Intelligence</h2>
+            <p class="section-subtitle">
+              AI Scanner combines on-device OCR with Gemini-powered document intelligence to turn scanned pages into searchable text, summaries and useful insights.
+            </p>
+          </div>
+
+          <!-- 5-STAGE PIPELINE -->
+          <div class="pipeline-grid">
+            <!-- Stage 01: Document Capture -->
+            <div class="pipeline-card">
+              <div class="pipeline-card-top">
+                <div class="pipeline-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                    <circle cx="12" cy="13" r="4"></circle>
+                  </svg>
+                </div>
+                <span class="pipeline-step-badge">01</span>
+              </div>
+              <h3 class="pipeline-title">Document Capture</h3>
+              <p class="pipeline-desc">Capture a document or import an existing image.</p>
+            </div>
+
+            <!-- Stage 02: Image Processing -->
+            <div class="pipeline-card">
+              <div class="pipeline-card-top">
+                <div class="pipeline-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M6 2v14a2 2 0 0 0 2 2h14"></path>
+                    <path d="M18 22V8a2 2 0 0 0-2-2H2"></path>
+                  </svg>
+                </div>
+                <span class="pipeline-step-badge">02</span>
+              </div>
+              <h3 class="pipeline-title">Image Processing</h3>
+              <p class="pipeline-desc">Detect boundaries, crop the page and improve readability.</p>
+            </div>
+
+            <!-- Stage 03: On-Device OCR -->
+            <div class="pipeline-card">
+              <div class="pipeline-card-top">
+                <div class="pipeline-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="4 7 4 4 20 4 20 7"></polyline>
+                    <line x1="9" y1="20" x2="15" y2="20"></line>
+                    <line x1="12" y1="4" x2="12" y2="20"></line>
+                  </svg>
+                </div>
+                <span class="pipeline-step-badge">03</span>
+              </div>
+              <h3 class="pipeline-title">On-Device OCR</h3>
+              <p class="pipeline-desc">Convert the scanned document into selectable, searchable text locally on the device.</p>
+              <span class="tech-tag">ON-DEVICE</span>
+            </div>
+
+            <!-- Stage 04: Gemini AI (Emphasized) -->
+            <div class="pipeline-card pipeline-card-featured">
+              <div class="pipeline-card-top">
+                <div class="pipeline-icon-box pipeline-icon-ai">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </div>
+                <span class="pipeline-step-badge step-badge-ai">04</span>
+              </div>
+              <h3 class="pipeline-title">Gemini AI</h3>
+              <p class="pipeline-desc">Analyze extracted text to understand the document and generate concise structured information.</p>
+              <span class="tech-tag tech-tag-ai">AI INTELLIGENCE</span>
+            </div>
+
+            <!-- Stage 05: Structured Output -->
+            <div class="pipeline-card">
+              <div class="pipeline-card-top">
+                <div class="pipeline-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                  </svg>
+                </div>
+                <span class="pipeline-step-badge">05</span>
+              </div>
+              <h3 class="pipeline-title">Structured Output</h3>
+              <p class="pipeline-desc">Produce summaries, key information and useful document insights.</p>
+            </div>
+          </div>
+
+          <!-- SECONDARY TECHNICAL EXPLANATION CARDS -->
+          <div class="tech-cards-grid">
+            <!-- Left Card: Local-First OCR -->
+            <div class="tech-card">
+              <div class="tech-card-header">
+                <div class="tech-card-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="5" y="2" width="14" height="20" rx="3" ry="3"></rect>
+                    <line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5"></line>
+                    <path d="M9 7h6M9 11h6"></path>
+                  </svg>
+                </div>
+                <h3 class="tech-card-title">Local-First OCR</h3>
+              </div>
+              <p class="tech-card-text">
+                Text recognition runs directly on the device, allowing scanned documents to be converted into searchable text without requiring OCR processing in the cloud.
+              </p>
+              <div class="tech-badges-row">
+                <span class="tech-pill">On-Device</span>
+                <span class="tech-pill">Fast</span>
+                <span class="tech-pill">Private</span>
+              </div>
+            </div>
+
+            <!-- Right Card: AI Document Intelligence -->
+            <div class="tech-card tech-card-ai">
+              <div class="tech-card-header">
+                <div class="tech-card-icon tech-card-icon-ai">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </div>
+                <h3 class="tech-card-title">AI Document Intelligence</h3>
+              </div>
+              <p class="tech-card-text">
+                Extracted document text can be processed with Gemini to generate concise summaries and identify useful information from longer documents.
+              </p>
+              <div class="tech-badges-row">
+                <span class="tech-pill tech-pill-ai">Gemini</span>
+                <span class="tech-pill tech-pill-ai">Summaries</span>
+                <span class="tech-pill tech-pill-ai">Document Insights</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRIVACY / ARCHITECTURE MESSAGE STRIP -->
+          <div class="arch-privacy-strip">
+            <div class="privacy-strip-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="M9 12l2 2 4-4"></path>
+              </svg>
+            </div>
+            <div class="privacy-strip-content">
+              <h4 class="privacy-strip-title">Local Where It Matters. AI Where It Helps.</h4>
+              <p class="privacy-strip-text">
+                Scanning, image processing and OCR stay on the device. AI features use extracted text only when the user chooses to generate AI-powered insights.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREENSHOTS / PRODUCT SHOWCASE SECTION -->
+      <section class="screenshots-section" id="screenshots">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow-badge">SEE IT IN ACTION</span>
+            <h2 class="section-title">Powerful Tools. One Simple Workflow.</h2>
+            <p class="section-subtitle">
+              From capturing a document to extracting text, generating AI insights and creating polished PDFs, AI Scanner keeps the entire workflow in one place.
+            </p>
+          </div>
+
+          <div class="showcase-grid">
+            <!-- 1. Scanner -->
+            <div class="showcase-card" tabindex="0" role="button" aria-label="View Scanner Interface preview" data-fullsrc="./assets/images/screenshots/scanner.jpg" data-caption="Scanner Interface">
+              <div class="showcase-img-wrapper">
+                <img 
+                  src="./assets/images/screenshots/scanner.jpg" 
+                  alt="AI Scanner automatic document edge detection and scanning interface" 
+                  class="showcase-img"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="showcase-fallback-box" aria-hidden="true">
+                  <span class="showcase-fallback-title">Scanner Interface</span>
+                  <span class="showcase-fallback-desc">Graphic unavailable</span>
+                </div>
+              </div>
+              <span class="showcase-label">Scanner</span>
+            </div>
+
+            <!-- 2. OCR -->
+            <div class="showcase-card" tabindex="0" role="button" aria-label="View OCR Text Extraction preview" data-fullsrc="./assets/images/screenshots/ocr.jpg" data-caption="OCR Text Extraction">
+              <div class="showcase-img-wrapper">
+                <img 
+                  src="./assets/images/screenshots/ocr.jpg" 
+                  alt="AI Scanner OCR interface extracting selectable text from a scanned document" 
+                  class="showcase-img"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="showcase-fallback-box" aria-hidden="true">
+                  <span class="showcase-fallback-title">OCR Text Extraction</span>
+                  <span class="showcase-fallback-desc">Graphic unavailable</span>
+                </div>
+              </div>
+              <span class="showcase-label">OCR</span>
+            </div>
+
+            <!-- 3. AI Summary -->
+            <div class="showcase-card" tabindex="0" role="button" aria-label="View AI Document Summary preview" data-fullsrc="./assets/images/screenshots/ai-summary.jpg" data-caption="AI Document Summary">
+              <div class="showcase-img-wrapper">
+                <img 
+                  src="./assets/images/screenshots/ai-summary.jpg" 
+                  alt="AI Scanner AI-powered document summary showing purpose, key information and warnings" 
+                  class="showcase-img"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="showcase-fallback-box" aria-hidden="true">
+                  <span class="showcase-fallback-title">AI Document Summary</span>
+                  <span class="showcase-fallback-desc">Graphic unavailable</span>
+                </div>
+              </div>
+              <span class="showcase-label">AI Summary</span>
+            </div>
+
+            <!-- 4. Library -->
+            <div class="showcase-card" tabindex="0" role="button" aria-label="View Document Library preview" data-fullsrc="./assets/images/screenshots/library.jpg" data-caption="Document Library">
+              <div class="showcase-img-wrapper">
+                <img 
+                  src="./assets/images/screenshots/library.jpg" 
+                  alt="AI Scanner searchable document library interface" 
+                  class="showcase-img"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="showcase-fallback-box" aria-hidden="true">
+                  <span class="showcase-fallback-title">Document Library</span>
+                  <span class="showcase-fallback-desc">Graphic unavailable</span>
+                </div>
+              </div>
+              <span class="showcase-label">Library</span>
+            </div>
+
+            <!-- 5. Export -->
+            <div class="showcase-card" tabindex="0" role="button" aria-label="View Export Options preview" data-fullsrc="./assets/images/screenshots/export.jpg" data-caption="Export Options">
+              <div class="showcase-img-wrapper">
+                <img 
+                  src="./assets/images/screenshots/export.jpg" 
+                  alt="AI Scanner searchable PDF export options" 
+                  class="showcase-img"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="showcase-fallback-box" aria-hidden="true">
+                  <span class="showcase-fallback-title">Export Options</span>
+                  <span class="showcase-fallback-desc">Graphic unavailable</span>
+                </div>
+              </div>
+              <span class="showcase-label">Export</span>
+            </div>
+
+            <!-- 6. Merge PDFs -->
+            <div class="showcase-card" tabindex="0" role="button" aria-label="View Merge & Organize PDFs preview" data-fullsrc="./assets/images/screenshots/merge-pdfs.jpg" data-caption="Merge & Organize PDFs">
+              <div class="showcase-img-wrapper">
+                <img 
+                  src="./assets/images/screenshots/merge-pdfs.jpg" 
+                  alt="AI Scanner PDF merge and page reordering interface" 
+                  class="showcase-img"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="showcase-fallback-box" aria-hidden="true">
+                  <span class="showcase-fallback-title">Merge &amp; Organize</span>
+                  <span class="showcase-fallback-desc">Graphic unavailable</span>
+                </div>
+              </div>
+              <span class="showcase-label">Merge PDFs</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRIVACY & LOCAL-FIRST TRUST SECTION -->
+      <section id="privacy" class="privacy-section">
+        <div class="container">
+          <div class="privacy-grid">
+            <!-- Left Column: Content & Trust Items -->
+            <div class="privacy-content-col">
+              <div class="section-header section-header-left">
+                <span class="eyebrow-badge">PRIVACY BY DESIGN</span>
+                <h2 class="section-title">Your Documents Stay in Your Control</h2>
+                <p class="section-subtitle">
+                  AI Scanner is designed around local document processing, keeping core scanning and OCR operations on your device while making AI-powered features optional.
+                </p>
+              </div>
+
+              <div class="trust-items-list">
+                <!-- Trust Item 1: On-Device OCR -->
+                <div class="trust-item">
+                  <div class="trust-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect x="5" y="2" width="14" height="20" rx="3" ry="3"></rect>
+                      <line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5"></line>
+                    </svg>
+                  </div>
+                  <div class="trust-item-text">
+                    <h3 class="trust-title">On-Device OCR</h3>
+                    <p class="trust-desc">Text recognition is processed locally on your device for the core OCR workflow.</p>
+                  </div>
+                </div>
+
+                <!-- Trust Item 2: Local Document Workflow -->
+                <div class="trust-item">
+                  <div class="trust-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                  </div>
+                  <div class="trust-item-text">
+                    <h3 class="trust-title">Local Document Workflow</h3>
+                    <p class="trust-desc">Core scanning, image processing and document organization are designed around local device processing.</p>
+                  </div>
+                </div>
+
+                <!-- Trust Item 3: Optional AI Intelligence -->
+                <div class="trust-item">
+                  <div class="trust-icon-box trust-icon-ai">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div class="trust-item-text">
+                    <h3 class="trust-title">Optional AI Intelligence</h3>
+                    <p class="trust-desc">Gemini-powered document intelligence is used when you choose to generate AI summaries or insights.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Visual Privacy Architecture Diagram -->
+            <div class="privacy-visual-col">
+              <div class="arch-diagram-wrapper">
+                <!-- Device Boundary Container -->
+                <div class="device-boundary-box">
+                  <div class="boundary-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect x="5" y="2" width="14" height="20" rx="3" ry="3"></rect>
+                      <line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5"></line>
+                    </svg>
+                    <span class="boundary-title">YOUR DEVICE</span>
+                  </div>
+
+                  <div class="device-process-flow">
+                    <div class="flow-node">
+                      <span class="flow-node-title">Document</span>
+                    </div>
+                    <div class="flow-arrow" aria-hidden="true">↓</div>
+                    <div class="flow-node">
+                      <span class="flow-node-title">Image Processing</span>
+                    </div>
+                    <div class="flow-arrow" aria-hidden="true">↓</div>
+                    <div class="flow-node">
+                      <span class="flow-node-title">On-Device OCR</span>
+                    </div>
+                    <div class="flow-arrow" aria-hidden="true">↓</div>
+                    <div class="flow-node flow-node-text">
+                      <span class="flow-node-title">Extracted Text</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Connector Arrow -->
+                <div class="connector-container">
+                  <div class="connector-line" aria-hidden="true"></div>
+                  <span class="connector-label">Optional AI Request</span>
+                  <div class="connector-line" aria-hidden="true"></div>
+                </div>
+
+                <!-- External Gemini AI Node -->
+                <div class="external-ai-box">
+                  <div class="external-ai-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div class="external-ai-text">
+                    <span class="external-ai-title">Gemini AI</span>
+                    <span class="external-ai-sub">Summaries &amp; Insights</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TRUST CALLOUT BAR -->
+          <div class="trust-callout-bar">
+            <div class="callout-left">
+              <div class="callout-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <span class="callout-text">Core OCR works locally. AI features are separate and optional.</span>
+            </div>
+            <a href="./privacy.html" class="trust-link">Read our Privacy Policy &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUCT MARKETING BANNER + FINAL DOWNLOAD CTA SECTION -->
+      <section id="download" class="download-section">
+        <div class="container">
+          <!-- PART 1: MARKETING BANNER -->
+          <div class="banner-card">
+            <img 
+              src="./assets/images/marketing/banner.jpg" 
+              alt="AI Scanner document scanning, OCR and AI document intelligence features" 
+              class="banner-img"
+              loading="lazy"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="banner-fallback-box" aria-hidden="true">
+              <span class="banner-fallback-title">AI Scanner Product Graphic</span>
+              <span class="banner-fallback-desc">Marketing graphic unavailable</span>
+            </div>
+          </div>
+
+          <!-- PART 2: FINAL CTA PANEL -->
+          <div class="cta-panel">
+            <div class="section-header">
+              <span class="eyebrow-badge">AI SCANNER FOR ANDROID</span>
+              <h2 class="section-title">Scan Smarter. Understand Faster.</h2>
+              <p class="section-subtitle">
+                Scan documents, extract searchable text, organize PDFs and generate AI-powered document insights from one streamlined Android app.
+              </p>
+            </div>
+
+            <!-- VALUE POINTS ROW -->
+            <div class="value-points-row" aria-label="App Highlights">
+              <div class="value-point">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>On-Device OCR</span>
+              </div>
+              <div class="value-point">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Searchable PDFs</span>
+              </div>
+              <div class="value-point">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>AI Document Insights</span>
+              </div>
+              <div class="value-point">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>PDF Tools</span>
+              </div>
+            </div>
+
+            <!-- CTA BUTTONS & RELEASE NOTE -->
+            <div class="cta-actions">
+              <button type="button" class="btn btn-primary btn-cta-main">
+                <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M3.609 1.814L13.792 12 3.61 22.186a1.99 1.99 0 0 1-.61-.958L3 2.772c0-.368.106-.72.303-.958zM15.206 13.414l2.584 2.584-12.753 7.362 10.169-9.946zm2.584-5.412L15.206 10.586 5.037.64l12.753 7.362zM16.621 12l2.97-2.97a1.99 1.99 0 0 1 0 3.94L16.62 12z"/>
+                </svg>
+                <span>Coming Soon on Google Play</span>
+              </button>
+              <a href="#features" class="btn btn-secondary">Explore Features</a>
+            </div>
+
+            <span class="release-note">Android release coming soon.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lightbox Modal for Image Preview -->
+      <div class="lightbox-modal" id="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Image Preview">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close image preview">&times;</button>
+        <div class="lightbox-content">
+          <img src="" alt="" id="lightbox-img" class="lightbox-img" />
+          <p id="lightbox-caption" class="lightbox-caption"></p>
+        </div>
+      </div>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-content">
         <div>
-          <h2>AI Scanner</h2>
-          <p>Private. Fast. Local-first.</p>
+          <h2>AI Scanner – PDF &amp; OCR</h2>
+          <p>Private. Fast. Local-first document intelligence for Android.</p>
         </div>
         <div>
           <h3>Legal</h3>

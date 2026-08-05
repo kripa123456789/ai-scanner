@@ -3,25 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
     <meta
       name="description"
-      content="Terms of Service placeholder page for AI Scanner."
+      content="Terms of Service for AI Scanner – PDF &amp; OCR Android application."
     />
     <title>Terms of Service | AI Scanner</title>
+    <link rel="canonical" href="https://kripa123456789.github.io/ai-scanner/terms.html" />
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Terms of Service | AI Scanner" />
+    <meta property="og:description" content="Terms of Service for AI Scanner – PDF &amp; OCR Android application." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kripa123456789.github.io/ai-scanner/terms.html" />
+    <meta property="og:image" content="https://kripa123456789.github.io/ai-scanner/assets/images/marketing/banner.jpg" />
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Terms of Service | AI Scanner" />
+    <meta name="twitter:description" content="Terms of Service for AI Scanner – PDF &amp; OCR Android application." />
+    <meta name="twitter:image" content="https://kripa123456789.github.io/ai-scanner/assets/images/marketing/banner.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/images/app-icon/app-icon.png" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <header class="site-header">
+    <header class="site-header" id="site-header">
       <nav class="nav container" aria-label="Main navigation">
-        <a class="brand" href="./index.html">AI Scanner</a>
-        <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+        <a class="brand" href="./index.html" aria-label="AI Scanner Home">
+          <div class="brand-icon-wrapper">
+            <img 
+              src="./assets/images/app-icon/app-icon.png" 
+              alt="" 
+              class="app-icon-img" 
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" 
+            />
+            <div class="app-icon-fallback" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+                <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+                <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+                <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+                <line x1="7" y1="12" x2="17" y2="12"></line>
+                <line x1="12" y1="7" x2="12" y2="17"></line>
+              </svg>
+            </div>
+          </div>
+          <span class="brand-text">AI Scanner</span>
+        </a>
+
+        <button 
+          class="menu-toggle" 
+          aria-label="Toggle navigation menu" 
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
         </button>
-        <div class="nav-links">
-          <a href="./privacy.html">Privacy Policy</a>
-          <a href="./terms.html">Terms of Service</a>
+
+        <div class="nav-menu" id="primary-navigation">
+          <ul class="nav-links">
+            <li><a href="./index.html#features">Features</a></li>
+            <li><a href="./index.html#how-it-works">How It Works</a></li>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms of Service</a></li>
+          </ul>
+          <div class="nav-cta-wrapper">
+            <a href="./index.html#get-app" class="btn btn-nav">Get the App</a>
+          </div>
         </div>
       </nav>
     </header>
@@ -31,7 +83,7 @@
         <div class="container">
           <p class="eyebrow">Legal</p>
           <h1>Terms of Service</h1>
-          <p class="page-subtitle">Read the terms governing your use of AI Scanner.</p>
+          <p class="page-subtitle">A professional place for your terms and conditions.</p>
         </div>
       </section>
 
