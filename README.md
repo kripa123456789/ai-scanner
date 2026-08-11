@@ -134,9 +134,10 @@ The core Android application source code, proprietary computer vision filters, a
 
 ## 📱 Android Release Status
 
-AI Scanner is currently in final testing and optimization for its upcoming Android release on Google Play.
+AI Scanner is officially live on Google Play for Android!
 
-Visit the [Live Product Website](https://kripa123456789.github.io/ai-scanner/) for feature previews, technical specifications, and release updates.
+- **Download on Google Play**: [https://play.google.com/store/apps/details?id=com.ksapps.aiscanner](https://play.google.com/store/apps/details?id=com.ksapps.aiscanner)
+- **Official Website**: [https://kripa123456789.github.io/ai-scanner/](https://kripa123456789.github.io/ai-scanner/)
 
 ---
 
