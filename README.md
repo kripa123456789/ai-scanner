@@ -8,6 +8,7 @@ Combining fast on-device computer vision and optical character recognition (OCR)
 
 ## 🚀 Live Product Website
 
+- **Download on Google Play**: [https://play.google.com/store/apps/details?id=com.ksapps.aiscanner](https://play.google.com/store/apps/details?id=com.ksapps.aiscanner)
 - **Official Landing Page**: [https://kripa123456789.github.io/ai-scanner/](https://kripa123456789.github.io/ai-scanner/)
 - **Privacy Policy**: [https://kripa123456789.github.io/ai-scanner/privacy.html](https://kripa123456789.github.io/ai-scanner/privacy.html)
 - **Terms of Service**: [https://kripa123456789.github.io/ai-scanner/terms.html](https://kripa123456789.github.io/ai-scanner/terms.html)
