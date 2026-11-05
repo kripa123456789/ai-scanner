@@ -91,8 +91,8 @@
         <div class="card">
           <article>
             <h1>AI Scanner Privacy Policy</h1>
-            <p><strong>Effective Date:</strong> July 30, 2026<br />
-            <strong>Last Updated:</strong> July 30, 2026</p>
+            <p><strong>Effective Date:</strong> November 4, 2026<br />
+            <strong>Last Updated:</strong> November 4, 2026</p>
 
             <blockquote>
               <p><strong>Notice:</strong> This Privacy Policy is intended for publication with AI Scanner on Google Play and a public website. It reflects the application's verified local-first architecture and current feature set.</p>
@@ -102,7 +102,7 @@
             <p>Welcome to <strong>AI Scanner</strong> (&quot;AI Scanner&quot;, &quot;the App&quot;, &quot;we&quot;, &quot;our&quot;, or &quot;us&quot;).</p>
             <p>AI Scanner is designed around a <strong>privacy-first, local-first architecture</strong>. Most document processing—including scanning, image enhancement, OCR, PDF generation, search indexing, document management, and storage—occurs entirely on your Android device.</p>
             <p>We do not require account registration, subscriptions, or cloud synchronization to use the core functionality of the App.</p>
-            <p>The only feature that transmits document content outside your device is the optional <strong>AI Summary</strong> feature. When you explicitly request an AI-generated summary, the App securely sends the extracted OCR text (not the original scanned images) to Google's Gemini API for processing.</p>
+            <p>The only features that transmit document content outside your device are the optional <strong>AI Summary</strong> and <strong>AI Chat</strong> features. The first time you use them the App asks for your consent. When you then request a summary or send a question, the App securely sends the extracted OCR text (not the original scanned images) to Google's Gemini API for processing.</p>
 
             <h2>2. Scope</h2>
             <p>This Privacy Policy explains:</p>
@@ -123,26 +123,29 @@
               <li>OCR text</li>
               <li>searchable PDF indexes</li>
               <li>AI summaries</li>
+              <li>document categories, detected on your device</li>
               <li>document titles</li>
               <li>creation dates</li>
               <li>export settings</li>
               <li>application preferences</li>
               <li>temporary processing files</li>
             </ul>
-            <p>These remain stored locally until removed by you or the operating system.</p>
+            <p>These remain stored locally until removed by you or the operating system. They are excluded from Android cloud backup. You can optionally encrypt them in Settings.</p>
 
-            <h3>B. Camera Permission</h3>
-            <p>Used solely for document scanning.</p>
+            <h3>B. Document Scanning</h3>
+            <p>Scanning uses the Google ML Kit Document Scanner, provided by Google Play services, which handles access to your camera. The App itself does not request camera permission.</p>
 
             <h3>C. OCR</h3>
             <p>OCR is performed locally using Google ML Kit.</p>
 
-            <h3>D. AI Summary</h3>
-            <p>Only after tapping <strong>Generate Summary</strong>:</p>
+            <h3>D. AI Summary and AI Chat</h3>
+            <p>Only after you agree and then tap to generate a summary or send a question:</p>
             <p>The App sends:</p>
             <ul>
-              <li>extracted OCR text</li>
+              <li>extracted OCR text of that document</li>
+              <li>your question and the recent conversation, for AI Chat</li>
             </ul>
+            <p>Chat conversations are not stored by the App. You can withdraw consent at any time in Settings.</p>
             <p>The App does NOT send:</p>
             <ul>
               <li>scanned images</li>
@@ -182,19 +185,19 @@
             <p>We do not sell, rent or monetize user information.</p>
             <p>Information leaves your device only when you:</p>
             <ul>
-              <li>request an AI Summary;</li>
+              <li>request an AI Summary or send an AI Chat question;</li>
               <li>export documents;</li>
               <li>share files;</li>
               <li>email support.</li>
             </ul>
 
             <h2>7. Data Retention</h2>
-            <p>Documents remain on your device until deleted.</p>
+            <p>Documents remain on your device until you delete them. Deleting a document permanently removes its pages and text from the App's storage.</p>
             <p>Temporary files may be removed automatically or manually.</p>
             <p>Exported copies are managed by you.</p>
 
             <h2>8. Security</h2>
-            <p>We use reasonable safeguards.</p>
+            <p>We use reasonable safeguards. Optional protections in Settings include App Lock, hiding content from screenshots and the recent apps screen, and encrypting stored documents on your device. Files you export or share are not encrypted by the App.</p>
             <p>No security system is perfect; users should avoid transmitting highly sensitive information to third-party AI services unless they understand the associated risks.</p>
 
             <h2>9. Your Rights</h2>
@@ -211,7 +214,7 @@
             <p>The App is not directed toward children under 13.</p>
 
             <h2>11. International Processing</h2>
-            <p>If AI Summary is used, OCR text may be processed on infrastructure operated by Google in jurisdictions outside your own.</p>
+            <p>If AI Summary or AI Chat is used, OCR text may be processed on infrastructure operated by Google in jurisdictions outside your own.</p>
 
             <h2>12. Future Changes</h2>
             <p>We may revise this policy as the App evolves. Material updates will revise the Effective Date and Last Updated date.</p>
@@ -228,8 +231,8 @@
               <li>No analytics SDKs.</li>
               <li>No crash reporting SDKs.</li>
               <li>OCR performed on-device.</li>
-              <li>AI Summary is optional.</li>
-              <li>Only OCR text is transmitted for AI summaries.</li>
+              <li>AI Summary and AI Chat are optional and ask for consent first.</li>
+              <li>Only OCR text and your questions are transmitted for AI features.</li>
               <li>Original scanned images remain on your device unless you explicitly export or share them.</li>
               <li>You control deletion and exports.</li>
             </ul>
